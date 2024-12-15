@@ -2,6 +2,8 @@
 
 A naive Python tool to remove your name from PDF annotations
 
+![image](https://github.com/user-attachments/assets/db7eabae-b289-4141-a962-c5ef6e62d83e)
+
 ## Dependencies and how to run this...
 
 You need a Python 3.9 or more recent virtual environment where you can install these two libraries:
