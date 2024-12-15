@@ -2,14 +2,16 @@
 
 A naive Python tool to remove your name from PDF annotations
 
-## Dependencies and how to run this.
+## Dependencies and how to run this
 
 I recommend either having Python and a virtual env where you can install these two libraries:
 
 - `pymupdf`  (the main PDF manipulation required)
 - `FreeSimpleGUI` (for the GUI panel)
 
-If you have no idea how to set up a Python virtual env I recommend installing [Thonny IDE](https://thonny.org) that gives you an isolated Python env out of the box and installing the libries from it's "Tools > Manage Packages" interface.
+Then you run [`remove_name_from_annotations_gui.py`](https://github.com/villares/anonimize-pdf-annotations/blob/main/remove_name_from_annotations_gui.py).
+
+If you have no idea how to set up a Python virtual env, no worries! I recommend installing [Thonny IDE](https://thonny.org) that gives you an isolated Python env out of the box and then you can install the two libraries metioned above from the "Tools > Manage Packages" panel. After that you can use Thonny to run the code.
 
 ## Stand-alone executables (using `pyinstaller`)
 
