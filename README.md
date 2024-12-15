@@ -13,7 +13,7 @@ You need a Python 3.9 or more recent virtual environment where you can install t
 
 Then run [`remove_name_from_annotations_gui.py`](https://github.com/villares/anonimize-pdf-annotations/blob/main/remove_name_from_annotations_gui.py).
 
-If you have no idea how to set up a Python virtual env, no worries! I recommend installing [Thonny IDE](https://thonny.org) that gives you an isolated Python env out of the box and then you can install the two libraries metnioned above from the "Tools > Manage Packages" panel. After that you can use Thonny to run the code.
+If you have no idea how to set up a Python virtual env, no worries! I recommend installing [Thonny IDE](https://thonny.org) that gives you an isolated Python env out of the box and then you can install the two libraries mentioned above from the "Tools > Manage Packages..." panel. After that you can use Thonny to run the code.
 
 ## ... or try a stand-alone executable 
 
