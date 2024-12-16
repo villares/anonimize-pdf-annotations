@@ -11,9 +11,7 @@ I_FONT = ('Courier', 16)
 layout = [
     [sg.Text('Input file:', font=L_FONT)],
     [sg.InputText(font=I_FONT), sg.FileBrowse(font=I_FONT)],
-    [sg.Text('Output file:', font=L_FONT)],
-    [sg.InputText(default_text=default_output, font=I_FONT), sg.FileSaveAs(font=I_FONT)],
-    [sg.Text('Change names in notes to:', font=L_FONT), sg.InputText(default_text='', font=I_FONT, size=(12, 1))],
+    [sg.Text('Change names in notes to:', font=L_FONT), sg.InputText(default_text='redacted name', font=I_FONT, size=(18, 1))],
     [sg.Checkbox('Remove author\'s name from main document metadata', font=I_FONT)],
     [sg.Button('Create modified PDF', font=L_FONT),
      sg.Button('CLOSE/EXIT', font=L_FONT)]
@@ -32,9 +30,9 @@ while True:
     elif event == 'Create modified PDF' and values:
         # Get the input and output values from the GUI
         input_file = Path(values[0])
-        output_file = values[1]
-        author = values[2] if values[2] else ' '
-        checkbox = values[3]
+        output_file = input_file.parent / (input_file.stem + '_modified.pdf')
+        author = values[1] if values[1] else ' '
+        checkbox = values[2]
         try:
             doc = pymupdf.open(input_file)
             if checkbox:
@@ -47,6 +45,7 @@ while True:
                     a.set_info(title=author)  # change author in annotations (title)
                     print(f'Modified: {a.info}')
             doc.save(output_file)
+            sg.popup(f'{output_file.name} saved.')
         except Exception as e:
             sg.popup(str(e))
 # Clean up the GUI
