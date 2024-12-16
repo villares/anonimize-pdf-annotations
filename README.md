@@ -2,7 +2,7 @@
 
 A naive Python tool to remove your name from PDF annotations
 
-![image](https://github.com/user-attachments/assets/db7eabae-b289-4141-a962-c5ef6e62d83e)
+![image](https://github.com/user-attachments/assets/3271d15f-ae29-43a7-8fe1-b9d29d637b38)
 
 ## Dependencies and how to run this...
 
@@ -17,13 +17,14 @@ If you have no idea how to set up a Python virtual env, no worries! I recommend 
 
 ## ... or try a stand-alone executable 
 
-Made using `pyinstaller`:
+Made using `pyinstaller remove_name_from_annotations_gui.py -F`:
 
-- Linux: [...//download/v0/remove_name_from_annotations_gui](https://github.com/villares/anonimize-pdf-annotations/releases/download/v0/remove_name_from_annotations_gui)
-- Windows: [.../download/v0/remove_name_from_annotations_gui.exe](https://github.com/villares/anonimize-pdf-annotations/releases/download/v0/remove_name_from_annotations_gui.exe) (thanks to [@introscopia](https://github.com/introscopia)!)
+- Linux: [...//download/v0.1/remove_name_from_annotations_gui](https://github.com/villares/anonimize-pdf-annotations/releases/download/v0.1/remove_name_from_annotations_gui)
+- Windows: [.../download/v0.1/remove_name_from_annotations_gui.exe](https://github.com/villares/anonimize-pdf-annotations/releases/download/v0.1/remove_name_from_annotations_gui.exe)
 
-If you are on MacOS, it would be great to have someone building it with `pyinstaller` so we can add here.
+- If you are on MacOS, it would be great to have someone building it, we could then add it here.
 
-## TODO
+## Acknowledgments
 
-- Remove output field to simplify UX, save result on same folder as input (with modified name), as suggested by Rodrigo Ghedin.
+Thank you [@introscopia](https://github.com/introscopia) for the encouragement and he first Windows .exe build!
+Rodrigo Ghedin proposed the removal of the output field to simplify the UX, saving the resulting PDF on same folder as the input with a modified name, thank you!
