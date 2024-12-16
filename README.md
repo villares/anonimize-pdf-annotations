@@ -23,3 +23,7 @@ Made using `pyinstaller`:
 - Windows: [.../download/v0/remove_name_from_annotations_gui.exe](https://github.com/villares/anonimize-pdf-annotations/releases/download/v0/remove_name_from_annotations_gui.exe) (thanks to [@introscopia](https://github.com/introscopia)!)
 
 If you are on MacOS, it would be great to have someone building it with `pyinstaller` so we can add here.
+
+## TODO
+
+- Remove output field to simplify UX, save result on same folder as input (with modified name), as suggested by Rodrigo Ghedin.
