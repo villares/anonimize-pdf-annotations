@@ -17,8 +17,9 @@ If you have no idea how to set up a Python virtual env, no worries! I recommend 
 
 ## ... or try a stand-alone executable 
 
-I made this using `pyinstaller`.
+Made using `pyinstaller`:
 
 - Linux: https://github.com/villares/anonimize-pdf-annotations/releases/download/v0/remove_name_from_annotations_gui
+- Windows: https://github.com/villares/anonimize-pdf-annotations/releases/download/v0/remove_name_from_annotations_gui (thank you @introscopia !)
 
-I'd love some help building and testing  `pyinstaller` results for Windows and MacOS!
+If you are on MacOS, it would be great to have someone building it with `pyinstaller` so we can add here.
