@@ -1,4 +1,4 @@
-# Anonimize PDF annotations
+# Anonymize PDF annotations
 
 A naive Python tool to remove your name from PDF annotations
 
