@@ -79,11 +79,11 @@ jobs:
           ls -a dist/
       - name: setup permissions
         run: |
-          chmod +x dist/remove_name_from_annotations_gui/remove_name_from_annotations_gui.app
+          chmod +x dist/remove_name_from_annotations_gui.app
       - name: Zip folder
         run: |
           cd dist/
-          zip -r remove_name_from_annotations_gui_osx.zip remove_name_from_annotations_gui
+          zip -r remove_name_from_annotations_gui_osx.zip remove_name_from_annotations_gui.app
           cd ..
       - name: upload build
         uses: actions/upload-artifact@v3

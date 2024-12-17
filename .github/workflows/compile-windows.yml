@@ -49,7 +49,7 @@ jobs:
           dir dist
       - name: Zip the folder
         run: |
-          Compress-Archive dist/remove_name_from_annotations_gui dist/remove_name_from_annotations_gui_win.zip
+          Compress-Archive dist/remove_name_from_annotations_gui.exe dist/remove_name_from_annotations_gui_win.zip
 
       - name: upload build
         uses: actions/upload-artifact@v3
