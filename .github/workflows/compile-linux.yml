@@ -1,0 +1,81 @@
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
+
+name: build anonymize-pdf-annotations - GUI for Linux
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - "*.*.*"
+
+    # Don't trigger if it's just a documentation update
+    paths-ignore:
+      - '**.md'
+      - '**.MD'
+      - '**.yml'
+      - '**.sh'
+      - '**.bat'
+      - 'tests/**'
+      - 'doc/**'
+      - '.vscode/*'
+      - 'Dockerfile'
+      - 'LICENSE'
+      - '.gitattributes'
+      - '.gitignore'
+      - '.dockerignore'
+      - 'spec.json'
+      - 'files.txt'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+      - name: Show ls content
+        run: |
+          echo ls -a
+          ls -a
+          echo ==========
+          echo ls . -a
+          ls . -a
+          echo ==========
+          echo ls remove_name_from_annotations_gui/ -a
+          ls app/ -a
+          echo ==========
+          echo ls dist/ -a
+          ls ./app -a
+          ls .. -a
+      - name: Install python dependencies
+        run: |
+          python3 -m pip install --upgrade pip setuptools wheel pyinstaller
+          pip install -r requirements.txt
+      - name: build binary
+        run: |
+          python3 setup.py build_binary
+      - name: setup permissions
+        run: |
+          chmod +x dist/remove_name_from_annotations_gui_linux/remove_name_from_annotations_gui_linux
+          chmod +x dist/remove_name_from_annotations_gui_linux/remove_name_from_annotations_guigui_linux
+      - name: Tar.gz folder
+        run: |
+          tar -czvf dist/remove_name_from_annotations_gui_linux.tar.gz dist/remove_name_from_annotations_gui_linux
+      - name: upload build
+        uses: actions/upload-artifact@v3
+        with:
+          name: Linux zipped
+          path: './dist/remove_name_from_annotations_gui_linux.tar.gz'
+      - name: Print files
+        run: |
+          ls -a dist/
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          prerelease: true
+          generate_release_notes: true
+          files: |
+            dist/remove_name_from_annotations_gui_linux.tar.gz
