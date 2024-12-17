@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='remove_name_from_annotations_gui',
+    name='anonymize-pdf-annotations',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

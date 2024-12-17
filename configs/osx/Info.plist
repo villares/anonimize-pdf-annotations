@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>English</string>
+	<key>CFBundleDisplayName</key>
+	<string>Anonymize PDF annotations</string>
+	<key>CFBundleDocumentTypes</key>
+	<array>
+		<dict>
+		<key>CFBundleTypeIconFile</key>
+		<string>icon.icns</string>
+		<key>CFBundleTypeName</key>
+		<string>Document</string>
+		<key>CFBundleTypeRole</key>
+		<string>Editor</string>
+		</dict>
+	</array>
+	<key>CFBundleExecutable</key>
+	<string>MacOS/Anonymize PDF annotations</string>
+	<key>CFBundleGetInfoString</key>
+	<string>Anonymize PDF annotations, written 2024-2024 by  Alexandre B A Villares</string>
+	<key>CFBundleIconFile</key>
+	<string>icon.icns</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.remove_name_from_annotations_gui.remove_name_from_annotations_gui</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>app</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>0.0.6</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>0.0.6</string>
+	<key>LSEnvironment</key>
+	<dict>
+		<key>PATH</key>
+		<string>./../Resources:/Applications/remove_name_from_annotations_gui/remove_name_from_annotations_gui.app/Contents/MacOS:/usr/local/bin:/usr/bin:/bin</string>
+	</dict>
+	<key>LSHasLocalizedDisplayName</key>
+	<false/>
+	<key>LSMinimumSystemVersion</key>
+	<string>10.14.0</string>
+	<key>NSAppleScriptEnabled</key>
+	<false/>
+	<key>NSHumanReadableCopyright</key>
+	<string>ISC License (ISCL)</string>
+	<key>NSMainNibFile</key>
+	<string>MainMenu</string>
+	<key>NSPrincipalClass</key>
+	<string>NSApplication</string>
+	<key>NSRequiresAquaSystemAppearance</key>
+	<string>false</string>
+	<key>NSInitialToolTipDelay</key>
+	<integer>1000</integer>
+</dict>
+</plist>
