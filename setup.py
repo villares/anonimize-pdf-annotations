@@ -17,7 +17,7 @@ import distutils.cmd
 
 OSX_INFO_PLIST = "configs/osx/Info.plist"
 
-NAME = 'anonymize-pdf-annotations'
+NAME = 'remove_name_from_annotations_gui'
 MAIN = 'remove_name_from_annotations_gui.py'
 
 
@@ -60,7 +60,7 @@ class BuildBinaryCommand(distutils.cmd.Command):
 
             exit(0)
         elif sys.platform == 'linux':
-            command_gui = f'pyinstaller --noconfirm --onefile --windowed --noupx --name "remove_name_from_annotations_gui" --clean  "./{MAIN}"'
+            command_gui = f'pyinstaller --noconfirm --onefile --windowed --noupx --name "{NAME}" --clean  "./{MAIN}"'
 
             os.system(command_gui)
 
