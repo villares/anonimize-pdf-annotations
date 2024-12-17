@@ -38,17 +38,7 @@ jobs:
           cache: 'pip'
       - name: Show ls content
         run: |
-          echo ls -a
-          ls -a
-          echo ==========
-          echo ls . -a
-          ls . -a
-          echo ==========
-          echo ls remove_name_from_annotations_gui/ -a
-          ls app/ -a
-          echo ==========
           echo ls dist/ -a
-          ls ./app -a
           ls .. -a
       - name: Install python dependencies
         run: |
@@ -59,11 +49,10 @@ jobs:
           python3 setup.py build_binary
       - name: setup permissions
         run: |
-          chmod +x dist/remove_name_from_annotations_gui_linux/remove_name_from_annotations_gui_linux
-          chmod +x dist/remove_name_from_annotations_gui_linux/remove_name_from_annotations_guigui_linux
+          chmod +x dist/remove_name_from_annotations_gui
       - name: Tar.gz folder
         run: |
-          tar -czvf dist/remove_name_from_annotations_gui_linux.tar.gz dist/remove_name_from_annotations_gui_linux
+          tar -czvf dist/remove_name_from_annotations_gui_linux.tar.gz dist/remove_name_from_annotations_gui
       - name: upload build
         uses: actions/upload-artifact@v3
         with:
